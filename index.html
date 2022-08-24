@@ -1,89 +1,290 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .button {
-          display: inline-block;
-          padding: 15px 25px;
-          font-size: 24px;
-          cursor: pointer;
-          text-align: center;
-          text-decoration: none;
-          outline: none;
-          color: #fff;
-          background-color: #4CAF50;
-          border: none;
-          border-radius: 50%;
-          box-shadow: 0 9px #999;
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<script>
+ 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') { c = c.substring(1); }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
         }
-        
-        .button:hover {background-color: #3e8e41}
-        
-        .button:active {
-          background-color: #3e8e41;
-          box-shadow: 0 5px #666;
-          transform: translateY(4px);
-        }
-        </style>
-</head>
-<body>
+    }
+    return "";
+}
 
-<h1>ICS බදාදා වාසනාව</h1>
+function checkVersion(){   if(getCookie('noupdate')==1) return;
+ var ua= navigator.userAgent, tem, 
+    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return 'IE '+(tem[1] || '');
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+ 
+	//if((M[0]==='Firefox'&& parseInt(M[1])<21) || (M[0]==='Chrome'&& parseInt(M[1])<44) || (M[0]==='Safari'&& parseInt(M[1])<10) ||(M[0]==='Opera'&& parseInt(M[1])<20) || (M[0]==='Edge'&& parseInt(M[1])<0)|| (M[0]==='MSIE'&& parseInt(M[1])<10)){
+	if(  (M[0]==='MSIE'&& parseInt(M[1])<10)){
+		window.open("?update=1",'_parent');
+	}else{ 
+	}
 
-<label id="GFG"></label>
-<label>Refresh කිරීමෙන් කඩය වෙනස් කළ හැක.</label>
-
-<p>Get your Sweep ticket now!</p>
-<div class="diven">
-
-    <label for="cars">Sweep:</label>
-    <select name="cars" class="bump">
-    <option id="ball0" value="volvo">Volvo</option>
-    <option id="ball1" value="saab">Saab</option>
-    <option id="ball2" value="opel">Opel</option>
-    <option id="ball3" value="audi">Audi</option>
-    <option id="ball4" value="bgh">Audi</option>
-    <option id="ball5" value="audi">Audi</option>
-    <option id="ball6" value="audi">Audi</option>
-    <option id="ball7" value="audi">Audi</option>
-    <option id="ball8" value="audi">Audi</option>
-    </select>
-    
-</div>
-<p>ඔබ ගත් ලොතරැයිවල අංක කොළයක ලියා තබා ගන්න.</p>
+}
+</script>
+<title>ICS බදාදා වාසනාව</title>
+<link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+<link rel="canonical" href="https://www.nlb.lk/" />
+<meta name="description" content="Vision The leader creating state investment through the contribution of all communities aimed at socio-economic development of the country. Mission A socially responsi..." />
+<meta name="keywords" content="country,customer,trust,earning,staff,competent,">
+<meta property="og:url" content="https://www.nlb.lk/" /><meta property="og:type" content="website" /><meta property="og:title" content="National Lotteries Board, Sri Lanka" /><meta property="og:description" content="Vision The leader creating state investment through the contribution of all communities aimed at socio-economic development of the country. Mission A socially responsi..." /><meta property="og:site_name" content="Home" /><meta property="og:locale" content="en_LK" /><meta property="og:image" content="https://www.nlb.lk/images/logo.png" /><meta name="fb:app_id" content="553047744883691" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="National Lotteries Board, Sri Lanka" />
+<meta name="twitter:description" content="Vision The leader creating state investment through the contribution of all communities aimed at socio-economic development of the country. Mission A socially responsi..." />
+<meta name="twitter:image" content="https://www.nlb.lk/images/logo.png" />
+<!--link href="min.css" rel="stylesheet" type="text/css" media=""/-->
 
 <script>
-    function randomNumber(min, max) {
-        d = Math.random() * (max - min) + min;
-        d = Math.trunc(d);
-        return d.toString()
-    }
+window.cmspopup=false;function dodsrcY(el) { for (var lx=0, ly=0; el != null; lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);   return ly;}
+function dodsrc(){
+var h = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight; 
+var y = window.pageXOffset !== undefined?window.pageYOffset:(((document.compatMode || "") === "CSS1Compat")?document.documentElement.scrollTop:document.body.scrollTop);
+var i = document.getElementsByTagName('img');
+for (var j=0; j<i.length; j++)if(dodsrcY(i[j])<y+h ){
+     if(i[j].getAttribute('data-sizes')) {i[j].setAttribute('sizes',i[j].getAttribute('data-sizes')); i[j].removeAttribute('data-sizes');  }
+	 if(i[j].getAttribute('data-srcset')) {i[j].setAttribute('srcset',i[j].getAttribute('data-srcset')); i[j].removeAttribute('data-srcset');  }
+     else if(i[j].getAttribute('data-src')) {i[j].setAttribute('src',i[j].getAttribute('data-src')); i[j].removeAttribute('data-src');  }
+}
+	var i = document.querySelectorAll('[data-background]');
+	for (var j=0; j<i.length; j++)if(dodsrcY(i[j])<y+h ){
+	      if(i[j].getAttribute('data-background')) {i[j].style.backgroundImage = "url('"+  i[j].getAttribute('data-background')+"')"; i[j].removeAttribute('data-background');  }
+	}
 
-    kade = Math.trunc(randomNumber(0, 10000)).toString();
-    document.getElementById('GFG').innerHTML = kade + " වන ලොතරැයි කඩය";
+}
 
-    b0 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b1 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b2 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b3 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b4 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b5 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b6 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b7 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
-    b8 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+window.addEventListener("load", function(event) {dodsrc();}); 
+window.addEventListener("scroll", function(event) {dodsrc(); event.preventDefault(); }); 
 
-    document.getElementsByName('cars')[0].options[0].innerHTML = b0.toString();
-    document.getElementsByName('cars')[0].options[1].innerHTML = b1.toString();
-    document.getElementsByName('cars')[0].options[2].innerHTML = b2.toString();
-    document.getElementsByName('cars')[0].options[3].innerHTML = b3.toString();
-    document.getElementsByName('cars')[0].options[4].innerHTML = b4.toString();
-    document.getElementsByName('cars')[0].options[5].innerHTML = b5.toString();
-    document.getElementsByName('cars')[0].options[6].innerHTML = b6.toString();
-    document.getElementsByName('cars')[0].options[7].innerHTML = b7.toString();
-    document.getElementsByName('cars')[0].options[8].innerHTML = b8.toString();
+</script>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://www.nlb.lk/rss.xml" /><style>
+.bestwebpop {
+    display: none !important;
+}
+</style><style>
+html,body{ margin:0; padding:0; height:100%; font-family:Arial, Helvetica, sans-serif, "Arial Narrow"; font-size:.9em  }
+a{ color:#999; color:cornflowerblue; text-decoration:none}
+a:hover{text-decoration:underline}
+
+ul,li{margin:0; padding:0}
+
+.wel> .ANI{   height:100%; width:100%;position:relative ; z-index:30}
+.STR {left:50%; top:100vh; margin-left:-50px ; width:100px; height:100px; content:''; display:block; position: absolute; float:left }
+.STR .star {width:100% }
+.STR .star>polygon{width:100% }
+
+.CIR {left:50%; top:100vh;  margin-left:-50px; width:100px; height:100px; box-sizing:border-box;  border:8px saddlebrown solid; background:yellow;  border-radius:50%;content:''; display:block; position:absolute}
+.CIR:before{width:35px; height:35px; top:50%; left:50%; transform:translate(-50%,-50%); border:12px saddlebrown solid; background:yellow; border-radius:50%;content:''; display:block; position:absolute }
+
+.CIR:nth-child(5n+1){border-color:#E87671;background:#F9BE1D}.CIR:nth-child(5n+1):before{border-color:#029FE4;background:#A8CF50}
+.CIR:nth-child(5n+2){border-color:#FFCF0C;background:#94B838}.CIR:nth-child(5n+2):before{border-color:#D59AF5;background:#FED006}
+.CIR:nth-child(5n+3){border-color:#ABCE4C;background:#26A9C3}.CIR:nth-child(5n+3):before{border-color:#F69EA4;background:#FCD538}
+.CIR:nth-child(5n+4){border-color:#E67475;background:#F9BE1D}.CIR:nth-child(5n+4):before{border-color:#00A0E2;background:#ACCF50}
+.CIR:nth-child(5n+5){border-color:#FED000;background:#94B838}.CIR:nth-child(5n+5):before{border-color:#D39BF3;background:#FED000}
+
+.LOG { left:50%; top:100vh; margin-left:-100px; width:200px; height:200px; box-sizing:border-box;  border-radius:50%;  position:absolute; }
+.LOG:before { display:block; content:'';  width:200px; height:200px; box-sizing:border-box;  border-radius:50%;  position:absolute; 
+background: radial-gradient(ellipse at center, rgba(255,255,255,.8) 0%,rgba(255,255,255,.8) 60%,rgba(180,180,180,.8) 75%); border: 6px rgba(255,255,255,.8) solid;}
+.LOG s{ top:50%; left:50%; transform:translate(-50%,-50%) scale(1.5,1.5);  display:block; position:absolute }
+.LOGx:after { display:block;position:absolute; top:100px; content:''; z-index:-63; background:#000;
+height: 0px; width: 200px; transform:translateY(-50%); top:50%; border-bottom:500px #fff solid; border-top:500px #fff solid; 
+}
+</style>
+<style>
+
+ 
+
+
+
+.wel { height:100%; position:relative; overflow:hidden; min-height:450px}
+
+.wel>span { display:block; position:absolute; height:50vh; width:50vw; background: transparent url('http://cdn.nlb.lk/images/theme/welcome.svg') no-repeat right bottom; background-size:cover; 
+filter: sepia(1) hue-rotate(-1deg) brightness(1.3); z-index:20; } 
+
+.wel>span:nth-child(4) {  transform:scale(1,1); left:0% } 
+.wel>span:nth-child(2) {  transform:scale(-1,1); left:50% } 
+.wel>span:nth-child(3) {  transform:scale(-1,-1); left:50%; top:50vh }  
+.wel>span:nth-child(4) {  transform:scale(1,-1); left:0%; top:50vh}
+
+.wel:after{ content:''; display:block; height:100vh; width:100vw; left:0; top:0; position:absolute;
+background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,211,150,1) 50%); z-index:19;
+}
+
+.wel:before{ content:''; display:block; height:100vw; width:100vw; transform:translateX(-50%) translateY(50%) ; left:50%; bottom:50%; position:absolute;
+background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0)  50%); border-radius:50%; z-index:21;
+}
+ 
+.wel .LX { position:absolute; bottom:90px; left:0; right:0; z-index:51;   }
+
+.wel .lg { position:absolute; left:50%; margin-left:-96.5px; bottom:0px; width:193px; min-height:340px; filter: drop-shadow(0px 6px 5px rgba(0,0,0,.5)); z-index:10; }
+.wel .lg .LG1{position:absolute;  height:143px; overflow:hidden;  top:0; }
+.wel .lg .LG2{position:relative;  left:50%; top:153px; margin-left:-150px;}
+
+.wel .LL { width:320px; text-align:center; position:absolute; height:130px; bottom:-50px; left:50%;  margin-left:-160px!important;  z-index:10  }
+.wel .LL li {box-shadow: 5px 5px 7px -1px rgba(0,0,0,0.22); filter:opacity(100%); overflow:hidden; top:0;  border:6px #fff solid; border-radius:50%; width:100px; height:100px; line-height:100px;  transform:rotate(0deg); display:block; position:absolute;
+background:#eee; background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%,rgba(180,180,180,1) 75%);  }
+.wel .LL li a{ text-decoration:none; font-size:1.7em; text-align:center; color:#999; margin:0; text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.46); width:100px; height:100px; line-height:95px;   transform:rotate(0deg); display:block; position:relative }
+.wel .LL li a:hover{ text-decoration:none}
+.wel .LL li:first-child a{ font-size:1.9em}
+.wel .LL li:hover{ transform:scale(1.3)  !important; z-index:5; color:#333;
+background: radial-gradient(ellipse at center, rgba(173,196,237,1) 0%,rgba(173,196,237,1) 60%,rgba(173,196,237,1) 75%); color:#fff }
+.wel .LL li:hover a{color:#fff}
+
+.wel .LL li.Lsi{ left:0; }
+.wel .LL li.Len{ left:50%; margin-left:-56px; z-index:3}
+.wel .LL li.Ltm{ right:0  }
+
+.wel .FF { position:absolute; bottom:0; left:0; right:0; z-index:50;filter:opacity(100%); transition:all .4s linear .3s;  box-sizing:border-box; height:100px; box-sizing:content-box; border-top:8px #fff solid;background:#efefef ; background: linear-gradient(to bottom, rgba(229,229,229,1) 0%,rgba(255,255,255,1) 15%,rgba(238,238,238,1) 85%,rgba(229,229,229,1) 100%);    }
+.wel .FF > div{ max-width:900px; margin:0 auto; padding:0 20px;}
+.wel .FF  div { vertical-align:text-bottom}
+.wel .FF  div img.ls{ margin-top:50px ;max-width:100%}
+.wel .FF  div ul {margin:5px 0 0 0 }
+
+.img1 {float:left}
+
+.developed,.copyright,.wel .FF > div .FR li{ display:block; text-align:right; padding:0; list-style:none }
+
+@media screen and (max-width: 1000px) { 
+.LOG {display:none}
+.wel .FF > div .FR li a.wellinks{visibility:hidden} 
+}
+
+body:before, .wel .lg >*, .wel .LL li{ transition:all .6s ease 0s;filter:opacity(100%); }
+body:before{filter:opacity(0%); content:''; display:block; height:100%; width:100%;   left: 0%; top: 0%; position:absolute;
+background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1)  50%);   z-index: 2 ; }
+
+
+body.wload:before{  content:''; display:block; height:100vh; width:100vw;   left: 0%; top: 0%; position:absolute;
+background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1)  50%);   z-index: 2 ; filter:opacity(100%);
+}
+
+.lds-dual-ring{ margin:-50px 0 0 -50px ;display:inline-block;  position:absolute; z-index:99999; top:50%; left:50%; transition:all .3s linear; filter:opacity(0%);}
+.lds-dual-ring:after,.lds-dual-ring:before{border:10px solid #fff;border-color:cornflowerblue transparent cornflowerblue transparent;width:100px;height:100px;content:" "; box-sizing:border-box; position:absolute; display:block; border-radius:50%;animation:lds-dual-ring 1.2s linear infinite;}
+.lds-dual-ring:before{border:14px solid #fff; border-color:#fff transparent #fff transparent; }
+@keyframes lds-dual-ring {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}
+
+.wload .STR, .wload .CIR, .wload .LOG { display:none; animation:none }
+.wload .lds-dual-ring {filter:opacity(100%);}
+
+.wload .wel .FF {filter:opacity(0%);}
+
+.wload .wel .lg .LG1{ filter:opacity(0%); transform:translateY(-100vh) }
+.wload .wel .lg .LG2{ filter:opacity(0%); transform:translateY(300px) }
+
+.wload .wel .LL li:nth-child(1){ transform:translateX(-200px); filter:opacity(0%); }
+.wload .wel .LL li:nth-child(2){ transform:translateY( 200px);   z-index:3;filter:opacity(0%);}
+.wload .wel .LL li:nth-child(3){ transform:translateX( 200px);filter:opacity(0%);}
+ 
+.wel .LL li:hover{transition:transform .4s ease!important;}
+
+.mnin{ height:10px; display:block}
+.LG { width:99px; height:66px; display:block; overflow:hidden; position:relative}
+.LG  img{ width:100%; height:auto; position:relative}
+.LG-1 img{ margin-top:-100px}
+.LG-2 img{ margin-top:-200px}
+.LG-3 img{ margin-top:-300px}
+.LG-4 img{ margin-top:-400px}
+.LG-5 img{ margin-top:-500px}
+.LG-6 img{ margin-top:-600px}
+.LG-7 img{ margin-top:-700px}
+.LG-8 img{ margin-top:-800px}
+.LG-9 img{ margin-top:-900px}
+.LG-10 img{ margin-top:-1000px}
+.LG-11 img{ margin-top:-1100px}
+.LG-12 img{ margin-top:-1200px}
+.LG-13 img{ margin-top:-1300px}
+.LG-14 img{ margin-top:-1400px}
+.LG-15 img{ margin-top:-1500px}
+
+
+
+</style>
+
+<!--[if IE]>
+<style>
+.wel> .ANI{ background:#eee url('images/theme/welcomeie.png') center center; height:100%; width:100%;position:relative }
+.wel .lg .LG1{ top:-20px; }
+.wel> .ANI >*{ display:none}
+.wel .LL li,.wel .LL li a{ background:transparent; background-image:url('images/theme/welcomeball.png'); border:0px; width:112px; height:112px; line-height:112px}
+.wel .LL li:hover a{ color:#333}
+.wload * { display:none }
+</style>
+<![endif]-->
+</head>
+<body class=" wload" onload="checkVersion()">
+<script>
+function deg2rad(angle){return angle*(Math.PI/180);}
+function sin(r){return Math.sin(r);}
+function cos(r){return Math.cos(r);}
+function abs(r){return Math.abs(r);}
+
+
+T=3;L=1000;r=10;CC=20;SC=10;RR=3/4;delay=3;
+s="";m=20;
+for(i=0;i<m;i++){ A=deg2rad(30*i-60);
+s=s+'.CIR'+i+'{ animation: aCTR'+i+' '+T+'s linear '+((m-i)*T/m+delay)+'s infinite;}';
+s=s+'@keyframes aCTR'+i+'{0%{transform:scale(.5) translate(0,y)}';
+s=s+(100*RR)+'% {transform:scale(1) translate('+(L*sin(A)*RR)+'px,-'+abs(L*cos(A))*RR+'px) }';
+s=s+'100%{transform:scale(1) translate('+(L*sin(A))+'px,-'+abs(L*cos(A))+'px)}} \n';
+}
+
+m=10;
+for(i=0;i<m;i++){ A=deg2rad(30*i-75); 
+s=s+'.STR'+i+'{animation:aSTR'+i+' '+T+'s linear '+(i*T/m+delay)+'s infinite;}';
+s=s+'@keyframes aSTR'+i+'{0%{ transform:scale(.5) translate(0,0)}';
+s=s+(100*RR)+'%{ transform:scale(1) translate('+((L*sin(A))*RR)+'px),-'+abs(L*cos(A))*RR+'px)}';
+s=s+'100%{ transform:scale(1) translate('+(L*sin(A))+'px,-'+abs(L*cos(A))+'px)}} \n';
+}
+
+T=T*3;m=20; r=m/6;
+for(i=0;i<m;i++){deg=20*(i%6)-50; A=deg2rad(deg); 
+s=s+'@keyframes aLOG'+i+'{ 0%{transform:translate(0,0);filter:opacity(100%);}\n';
+s=s+(100*(1/r)*RR)+'%{transform:translate('+((L*sin(A))*RR)+'px,'+(-(L*cos(A))*RR)+'px);filter:opacity(100%);}\n';
+s=s+(100*(1/r))+'%{transform:translate('+(L*sin(A))+'px,'+(-L*cos(A))+'px);filter:opacity(0%);}\n';
+s=s+(100*(1/r)+.01)+'100%{transform:translate(0,0);filter:opacity(0%);} 100%{transform:translate(0,0);filter:opacity(0%);}   }\n';
+dt=  T*(1/r);//rand(100,100)/100
+s=s+'.LOG.LOG'+i+'{  animation: aLOG'+i+' '+T+'s linear '+( dt*parseInt(i/6)+ (i%2?dt*.2:dt*-.2)*1+delay)+'s infinite; }\n';
+s=s+'.LOG.LOG'+i+':after{ transform:  translateY(-50%) rotate('+(-deg)+'deg)} \n\n\n';
+}
+
+head = document.head || document.getElementsByTagName('head')[0],
+style = document.createElement('style');
+style.type = 'text/css';
+if (style.styleSheet) style.styleSheet.cssText = s; else style.appendChild(document.createTextNode(s));
+head.appendChild(style);
+ 
+
 </script>
 
-
+<script>window.onload= function(){ checkVersion();document.body.className=""; };</script>
+<div class="lds-dual-ring"></div>
+<div class="wel"><span></span><span></span><span></span><span></span>
+<div class="ANI" id="ANI">
+	</div>
+	<div class="LX">
+        <h1 style="text-align: center; padding-bottom: 100px">ICS බදාදා වාසනාව</h1>
+		<ul class="LL">
+		<li class="Lsi"><a href="chooser-sin.html">සිංහල</a></li><li class="Len"><a href="chooser-eng.html">English</a></li><li class="Ltm"><a href="chooser-tam.html">தமிழ்</a></li>		</ul>
+	</div>
+</div>
+	</div></div>
+</div>
 
 </body>
-</html>
+</html><!-- cashed -->

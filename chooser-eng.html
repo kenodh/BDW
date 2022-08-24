@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button {
+          display: inline-block;
+          padding: 15px 25px;
+          font-size: 24px;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          outline: none;
+          color: #fff;
+          background-color: #4CAF50;
+          border: none;
+          border-radius: 50%;
+          box-shadow: 0 9px #999;
+        }
+        
+        .button:hover {background-color: #3e8e41}
+        
+        .button:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+        }
+        </style>
+</head>
+<body  style="background-image: url('bdw1.png');">
+
+<h1>ICS බදාදා වාසනාව</h1>
+
+<label id="GFG"></label><br>
+<label>To change the shop, click Refresh.</label>
+
+<p>Get your Sweep ticket now!</p>
+<div class="diven">
+
+    <label for="cars">Sweep:</label>
+    <select name="cars" class="bump">
+    <option id="ball0" value="volvo">Volvo</option>
+    <option id="ball1" value="saab">Saab</option>
+    <option id="ball2" value="opel">Opel</option>
+    <option id="ball3" value="audi">Audi</option>
+    <option id="ball4" value="bgh">Audi</option>
+    <option id="ball5" value="audi">Audi</option>
+    <option id="ball6" value="audi">Audi</option>
+    <option id="ball7" value="audi">Audi</option>
+    <option id="ball8" value="audi">Audi</option>
+    </select>
+    
+</div>
+<p>Write the lotteries you choose in a paper.</p>
+
+<script>
+    function randomNumber(min, max) {
+        d = Math.random() * (max - min) + min;
+        d = Math.trunc(d);
+        return d.toString()
+    }
+
+    kade = Math.trunc(randomNumber(0, 10000)).toString();
+    document.getElementById('GFG').innerHTML = "Lottery shop no: " + kade;
+
+    b0 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b1 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b2 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b3 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b4 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b5 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b6 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b7 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+    b8 = randomNumber(0, 10) + " " + randomNumber(0, 100) + " " + randomNumber(0, 100) + " " +  randomNumber(0, 100) + " " +  randomNumber(0, 1000) + " " +  randomNumber(0, 1000);
+
+    document.getElementsByName('cars')[0].options[0].innerHTML = b0.toString();
+    document.getElementsByName('cars')[0].options[1].innerHTML = b1.toString();
+    document.getElementsByName('cars')[0].options[2].innerHTML = b2.toString();
+    document.getElementsByName('cars')[0].options[3].innerHTML = b3.toString();
+    document.getElementsByName('cars')[0].options[4].innerHTML = b4.toString();
+    document.getElementsByName('cars')[0].options[5].innerHTML = b5.toString();
+    document.getElementsByName('cars')[0].options[6].innerHTML = b6.toString();
+    document.getElementsByName('cars')[0].options[7].innerHTML = b7.toString();
+    document.getElementsByName('cars')[0].options[8].innerHTML = b8.toString();
+</script>
+
+
+
+</body>
+</html>
